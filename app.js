@@ -34,6 +34,9 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
+//Rutas para manejar los tickets de cine
+const ticketsRoutes = require("./routes/ticket.routes");
+app.use("/", ticketRoutes);
 app.use(require('./routes/reserva.routes'));
 
 // TODO: Si la petición no coincide con ninguna de las rutas declaradas, mostrar error 404
