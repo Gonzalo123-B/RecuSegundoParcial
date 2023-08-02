@@ -1,8 +1,14 @@
 // Imports
-const cors = require('cors');
 const express = require('express');
-
+const cors = require('cors');
+const helmet = require('helmet')
+const morgan = require('morgan')
 const path = require('path');
+
+// acceder a las variables de entorno '.env'
+require("dotenv").config();
+// require ejs
+require("ejs");
 
 const app = express();
 
